@@ -15,16 +15,17 @@ comments: true
 - 입력크기가 n인 배열의 정렬 수행시간을 T(n)이라 하자.
 
   
+
 T(n)에 대한 점화식은 다음과 같다.
-  
+
   > T(n) = cn ( n = 1 )
   >
   > T(n) = 2T(n/2) + cn ( n>1 )
+
   
-  
-  
+
   T(n)이 2T(n/2) + cn (n>1)인 이유
-  
+
   > T(n/2) : n을 divide & conquer 하는 과정
   >
   > cn : divide & conquer 후 merge하는 데 드는 비용
@@ -37,7 +38,7 @@ T(n)에 대한 점화식은 다음과 같다.
 
 
 
-![점화식트리](/assets/post-img/algorithm/점화식트리.png)
+<img src="/assets/post-img/algorithm/점화식트리.png"/>
 
 
 
@@ -45,13 +46,13 @@ T(n)에 대한 점화식은 다음과 같다.
 
 
 
-![재귀트리](/assets/post-img/algorithm/재귀트리.png)
+<img src="/assets/post-img/algorithm/재귀트리.png"/>
 
 트리의 각 레벨에서 노드의 개수와 각 레벨의 합을 구하면 아래와 같다.
 
 
 
-![재귀트리withLevel](/assets/post-img/algorithm/재귀트리withLevel.png)
+<img src="/assets/post-img/algorithm/재귀트리withLevel.png"/>
 
 Level 0 에는 n이 1개 있고, level 1 에는 n/2 이 2개, level 2 에는 n/4 이 4개, … , level h 에는 T(1) 이 2^h 개 있다. T(1) = 1 로 표현 가능하므로 h = log2n 이라는 결과를 얻을 수 있다.
 
