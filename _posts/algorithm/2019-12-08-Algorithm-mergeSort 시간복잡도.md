@@ -38,7 +38,7 @@ T(n)에 대한 점화식은 다음과 같다.
 
 
 
-<img src="/assets/post-img/algorithm/점화식트리.png"/>
+<img src="/assets/post-img/algorithm/recurrenceFormula.png"/>
 
 
 
@@ -46,13 +46,13 @@ T(n)에 대한 점화식은 다음과 같다.
 
 
 
-<img src="/assets/post-img/algorithm/재귀트리.png"/>
+<img src="/assets/post-img/algorithm/recurrenceTree.png"/>
 
 트리의 각 레벨에서 노드의 개수와 각 레벨의 합을 구하면 아래와 같다.
 
 
 
-<img src="/assets/post-img/algorithm/재귀트리withLevel.png"/>
+<img src="/assets/post-img/algorithm/recurrenceTreeWithLevel.png"/>
 
 Level 0 에는 n이 1개 있고, level 1 에는 n/2 이 2개, level 2 에는 n/4 이 4개, … , level h 에는 T(1) 이 2^h 개 있다. T(1) = 1 로 표현 가능하므로 h = log2n 이라는 결과를 얻을 수 있다.
 
