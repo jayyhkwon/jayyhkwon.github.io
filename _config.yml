@@ -1,0 +1,73 @@
+# Site Info
+title: 'jayyhkwon의 개발공부로그'
+tagline: 'jayyhkwon의 개발공부로그'
+description: '프로그래밍을 공부하며 배운점 느낀점을 기록하는 곳입니다.'
+baseurl: ""
+url: https://jayyhkwon.github.io
+#logo: '/public/logo.png'
+
+# Site configurations
+gems:
+  - jekyll-paginate
+markdown: kramdown
+kramdown:
+  input: GFM
+excerpt_separator: "<!-- more -->"
+sass:
+  style: compressed
+  sass_dir: _scss
+paginate: 5
+paginate_path: '/blog/page:num'
+permalink: pretty
+
+version: 1.0.0
+
+# About/contact
+author:
+  name: YONGHYUN KWON
+  description: .
+  contact:
+    # linkedin:  https://www.linkedin.com/in/lizhihao
+    github: https://github.com/jayyhkwon
+    #facebook:  
+    # twitter:   https://twitter.com/Li_Zhihao
+    # weibo:     http://weibo.com/41173780
+    email: mailto:jayyhkwon@gmail.com
+
+# Navigation (2nd level links supported)
+nav:
+  Home:
+    - '/blog/'
+  Categories:
+    - '/'
+    # - { Categories All: '/blog/categories/' }
+    - { TIL (Today I Learned): '/blog/categories/#TIL' }
+    - { Network: '/blog/categories/#Network' }
+    - { Database: '/blog/categories/#Database' }
+    - { DesignPattern: '/blog/categories/#DesignPattern' }
+    - { Algorithm: '/blog/categories/#Algorithm' }
+    - { git: '/blog/categories/#git' }
+    - { Java: '/blog/categories/#Java' }
+    - { Spring: '/blog/categories/#Spring' }
+    - { C: '/blog/categories/#C' }
+    - { Etc: '/blog/categories/#Etc' }
+    # - { Tags: '/blog/tags/' }
+  About:
+    - '/about/'
+  Search:
+    - '/search/'
+
+# Where are tags and categories displayed
+tag_page: '/blog/tags/'
+category_page: '/blog/categories/'
+
+
+# Puglins
+mathjax: true # whether support mathjax
+google_analytics_token: '' # leave blank if you don't want google analytics
+disqus_short_name: 'https-jayyhkwon-github-io' # leave blank if you don't want disqus
+
+
+# Use the following plug-ins
+gems:
+   - jekyll-paginate
