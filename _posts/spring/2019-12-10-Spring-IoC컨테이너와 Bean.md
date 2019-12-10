@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "IoC 컨테이너와 Bean"
+category: Spring
+tags: [Spring]
+comments: true
+---
+
 
 
 ### IoC Container와 Bean

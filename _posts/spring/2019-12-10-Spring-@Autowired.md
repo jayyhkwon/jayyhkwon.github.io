@@ -1,3 +1,15 @@
+---
+layout: post
+title:  "@Autowired"
+category: Spring
+tags: [Spring]
+comments: true
+---
+
+
+
+
+
 
 
 ## @AutoWired
