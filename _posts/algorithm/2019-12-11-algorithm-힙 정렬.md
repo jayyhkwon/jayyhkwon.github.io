@@ -122,21 +122,30 @@ BuildMaxHeap(A)
 
 > HeapSort
 
-- 힙 정렬은 다음과 같은 방법으로 수행된다
-  	1. 주어진 데이터를 힙으로 만든다
-   	2. 힙에서 최대값(루트 노드)을 가장 마지막 값과 바꾼다.
-   	3.  힙의 크기가 1 줄어든 것으로 간주한다. 즉, 마지막 값은 힙의 일부가 아닌것으로 간주한다.
-   	4.  루트 노드에 대해서 HEAPIFY(1)한다.
-   	5.  2~4번을 반복한다.
+- 힙 정렬은 다음과 같은 방법으로 수행된다<br>
+  	
+   1. 주어진 데이터를 힙으로 만든다.<br>
+   2. 힙에서 최대값(루트 노드)을 가장 마지막 값과 바꾼다.<br>
+   3. 힙의 크기가 1 줄어든 것으로 간주한다. 즉, 마지막 값은 힙의 일부가 아닌것으로 간주한다.<br>
+   4. 루트 노드에 대해서 HEAPIFY(1)한다.<br>
+   5. 2~4번을 반복한다.<br>
+   
+- 시간복잡도는 O(n) + O(nlogn) = O(nlogn)
+
+   ​			
 
 ```java
 HeapSort(A)
-  BuildMaxHeap(A)
-  for i= A.length downto 2
+  BuildMaxHeap(A) // O(n)
+  for i= A.length downto 2 // O(nlogn)
     exchange A[1] with A[i]
     A.heap.size = A.heap.size - 1
     MaxHeapify(A,1)
 ```
+
+
+
+
 
 
 
@@ -162,7 +171,8 @@ class HeapSortTest {
 
 
 public class HeapSort {
-
+		
+  	// 최대힙의 0번째 값(최대값)을 가장 뒤로 보내 정렬한다.
     public static void HeapSort(Heap heap){
         BuildMaxHeap(heap);
         int tmp = Integer.MIN_VALUE;
@@ -215,7 +225,7 @@ public class HeapSort {
     
     public static class Heap {
         int[] heap;
-        int size;
+        int size; // heapSize
 
         public Heap(int[] src){
             heap = src;
@@ -226,6 +236,7 @@ public class HeapSort {
             return size;
         }
 
+      	// 배열 사이즈
         public int length(){
             return heap.length;
         }
