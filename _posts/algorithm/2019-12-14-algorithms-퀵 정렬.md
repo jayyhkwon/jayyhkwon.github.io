@@ -31,11 +31,13 @@ comments: true
 
 
 
+
+
+
+
 > **Partition**
 
 - 기준값(pivot)의 인덱스를 반환하는 연산 --> **퀵 정렬의 핵심**
-
-- 시간복잡도는 기준값(pivot)을 제외한 데이터를 비교하므로 n-1개를 비교한다. 따라서 O(n)이다.
 
 - pseudocode는 기준값(pivot)을 배열의 마지막 값을 사용한다.
 
@@ -73,7 +75,7 @@ Partition(A, p, r){
 - QuickSort는 다음과 같은 방법으로 수행된다.
   1. p<r 인 경우 pivot 인덱스 q를 구한다.
   2. QuickSort(A,p,q-1)를 재귀호출 한다.
-  3. QuickSort(A,q+1,r)를 재귀호출한다.
+  3. QuickSort(A,q+1,r)를 재귀호출 한다.
 
 
 
@@ -99,15 +101,15 @@ QuickSort(A,p,r){
 
 - 최선의 경우 시간복잡도는 O(n^2)
 
-<img src="/assets/post-img/algorithms/best.pdf">
+<img src="/assets/post-img/algorithm/best.pdf">
 
 - 최악의 경우 시간복잡도는 O(nlogn)
 
-<img src="/assets/post-img/algorithms/worst.pdf">
+<img src="/assets/post-img/algorithm/worst.pdf">
 
 - 평균의 경우 시간복잡도는 O(nlogn)
 
-<img src="/assets/post-img/algorithms/average.pdf">
+<img src="/assets/post-img/algorithm/average.pdf">
 
 
 
@@ -117,14 +119,14 @@ QuickSort(A,p,r){
 
   최악의 경우를 비교해보자면 합병정렬 = O(nlogn), 퀵정렬 = O(n^2) 으로 퀵정렬이 불리해보인다.
 
-  그러나
+  하지만 그럼에도 불구하고 퀵정렬을 많이 사용하는 데는 이유가 있다.
 
   1. 추가배열을 사용하지 않는점<br>
 
   2.  랜덤화 퀵정렬로 최악의 경우를 피할 수 있는점<br>
   3. cpu 캐쉬 히트율이 높아 평균적으로 합병정렬보다 높은 성능을 보인다는 점 에서 합병정렬보다 선호된다.
 
-  <a href="http://blog.naver.com/zephyehu/150013176075">그러나 배열에 같은 값이 존재하고 인덱스가 의미있는 경우 합병 정렬을 고려할 수 있다.</a>
+  <a href="http://blog.naver.com/zephyehu/150013176075">배열에 같은 값이 존재하고 인덱스가 의미있는 경우 합병 정렬을 고려할 수 있다.</a>
 
 
 
@@ -135,7 +137,3 @@ ref Introduction to algorithms<br>
 ref <a href="https://www.geeksforgeeks.org/why-quick-sort-preferred-for-arrays-and-merge-sort-for-linked-lists/">합병정렬 vs 퀵정렬</a><br>
 
 ref.<a href="[https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC](https://ko.wikipedia.org/wiki/퀵_정렬)">wiki</a>
-
-
-
-https://www.youtube.com/watch?v=ZGnavCjNt4g&t=1599s
