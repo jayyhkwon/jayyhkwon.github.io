@@ -101,15 +101,15 @@ QuickSort(A,p,r){
 
 - 최선의 경우 시간복잡도는 O(n^2)
 
-<img src="/assets/post-img/algorithm/best.pdf">
+<img src="/assets/post-img/algorithm/best.jpg">
 
 - 최악의 경우 시간복잡도는 O(nlogn)
 
-<img src="/assets/post-img/algorithm/worst.pdf">
+<img src="/assets/post-img/algorithm/worst.jpg">
 
 - 평균의 경우 시간복잡도는 O(nlogn)
 
-<img src="/assets/post-img/algorithm/average.pdf">
+<img src="/assets/post-img/algorithm/avg.jpg">
 
 
 
