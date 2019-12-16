@@ -97,19 +97,94 @@ QuickSort(A,p,r){
 - **퀵 정렬은 partition() 연산이 핵심**이라는 말을 글을 시작하며 말했다.
 
   partion()에 따라 시간복잡도는 다음과 같이 달라진다.
+
   
 
-- 최선의 경우 시간복잡도는 O(n^2)
+- 최선의 경우 시간복잡도는 O(nlogn)
 
 <img src="/assets/post-img/algorithm/best.jpg">
 
-- 최악의 경우 시간복잡도는 O(nlogn)
+
+
+- 최악의 경우 시간복잡도는 O(n^2)
 
 <img src="/assets/post-img/algorithm/worst.jpg">
+
+
 
 - 평균의 경우 시간복잡도는 O(nlogn)
 
 <img src="/assets/post-img/algorithm/avg.jpg">
+
+
+
+> Java로 퀵 정렬 구현
+
+- 테스트 코드
+
+```java
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
+class QuickSortTest {
+
+    private int[] input;
+    private int[] output;
+
+    @BeforeEach
+    public void setUp(){
+        input = new int[]{13,19,9,5,12,8,7,4,21,2,11};
+        output = new int[]{2,4,5,7,8,9,11,12,13,19,21};
+    }
+
+    @Test
+    public void test(){
+        QuickSort.quickSort(input,0,input.length-1);
+        assertArrayEquals(input,output);
+    }
+}
+
+```
+
+- 퀵 정렬 코드
+
+```java
+public class QuickSort {
+    
+    public static void quickSort(int[] src, int from, int to){
+        if(from < to){
+            int mid = partition(src,from,to);
+            quickSort(src,from,mid-1);
+            quickSort(src,mid+1,to);
+        }
+    }
+
+    private static int partition(int[] src, int from, int to) {
+        int pivot = src[to];
+        int i = from -1;
+        for(int j=from; j<to ;j++){
+            if(src[j] < pivot){
+                i++;
+                swap(src,i,j);
+            }
+        }
+        swap(src,++i,to);
+        return i;
+    }
+
+    private static void swap(int[] src, int i, int j) {
+        int tmp = src[i];
+        src[i] = src[j];
+        src[j] = tmp;
+    }
+}
+
+```
+
+
 
 
 
