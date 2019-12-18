@@ -18,6 +18,7 @@ comments: true
 - 모든 원소는 양의 정수여야 한다.
 - 시간복잡도는 O(n+k)로 보통 k=O(n)일 때 계수정렬을 사용하고 이 경우 시간복잡도는 O(n)이다.
 - <a href="[https://ko.wikipedia.org/wiki/%EC%A0%95%EB%A0%AC_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98#%EC%95%88%EC%A0%95%EC%84%B1](https://ko.wikipedia.org/wiki/정렬_알고리즘#안정성)">안정성</a>을 가지는 정렬이다
+- 정렬을 위해 추가 공간이 필요하다
 
 
 
