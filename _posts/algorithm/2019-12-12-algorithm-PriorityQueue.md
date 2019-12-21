@@ -108,14 +108,15 @@ Insert(S,key)
 
 
 
-> 자바로 코드 구현
+> 자바로 우선순위 큐 구현
 
-- 자바에 존재하는 PriorityQueue를 상속받지 않고 Heap 클래스를 만들어 구현해보았다.
+- **자바에 존재하는 PriorityQueue를 상속받지 않고 Heap 클래스를 만들어 구현해보았다.**
 
 
+
+- 테스트 코드
 
 ```java
-// 테스트코드
 class PriorityQueueTest {
 
     private PriorityQueue priorityQueue;
@@ -152,6 +153,8 @@ class PriorityQueueTest {
 ```
 
 
+
+- 알고리즘
 
 ```java
 

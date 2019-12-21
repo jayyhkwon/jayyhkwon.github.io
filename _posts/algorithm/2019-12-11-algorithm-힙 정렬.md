@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "힙 정렬" 
+title:  "힙정렬" 
 category: Algorithm
 tags: [Algorithm]
 comments: true
@@ -153,49 +153,59 @@ HeapSort(A)
 
 
 
-> Java로 힙 정렬 구현
+> Java로 힙정렬 구현
+
+- 테스트 코드
 
 ```java
-// test class
+import org.junit.jupiter.api.Test;
+import java.util.Arrays;
+import static org.junit.jupiter.api.Assertions.*;
+
 class HeapSortTest {
 
     @Test
-    public void test(){
-        HeapSort.Heap heap = new HeapSort.Heap(new int[]{5,13,2,25,7,17,20,8,4});
-        int[] expected = new int[]{2,4,5,7,8,13,17,20,25};
-        HeapSort.HeapSort(heap);
-        assertArrayEquals(heap.getHeap(), expected);
+    public void test() {
+        int[] input = new int[]{5, 13, 2, 25, 7, 17, 20, 8, 4};
+        HeapSort.Heap heap = new HeapSort.Heap(input);
+        int[] answer = Arrays.copyOf(input, input.length);
+        Arrays.sort(answer);
+
+        HeapSort.heapSort(heap);
+        assertArrayEquals(heap.getHeap(), answer);
     }
-
 }
+```
 
+
+
+- 알고리즘
+
+```java
 
 public class HeapSort {
-		
-  	// 최대힙의 0번째 값(최대값)을 가장 뒤로 보내 정렬한다.
-    public static void HeapSort(Heap heap){
-        BuildMaxHeap(heap);
+
+    // 최대힙의 0번째 값(최대값)을 가장 뒤로 보내 정렬한다.
+    public static void heapSort(Heap heap){
+        buildMaxHeap(heap);
         int tmp = Integer.MIN_VALUE;
         for(int i = heap.length()-1; i>=0; i--){
-            tmp = heap.get(i);
-            heap.set(i,heap.get(0));
-            heap.set(0,tmp);
+            swap(heap,i,0);
             heap.decrementSize();
-            MaxHeapify(heap,0);
+            maxHeapify(heap,0);
         }
     }
 
-    private static void BuildMaxHeap(Heap heap){
+    private static void buildMaxHeap(Heap heap){
         for(int i = heap.length()/2-1; i>=0; i--)
-            MaxHeapify(heap,i);
+            maxHeapify(heap,i);
     }
 
-    private static void MaxHeapify(Heap heap, int idx){
+    private static void maxHeapify(Heap heap, int idx){
         int leftIndex = getLeftIndex(idx);
         int rightIndex = getRightIndex(idx);
         int size = heap.size();
         int largest = -1;
-        int tmp = Integer.MIN_VALUE;
 
         // 왼쪽 노드와 비교
         if(leftIndex < size && heap.get(leftIndex) > heap.get(idx))
@@ -205,14 +215,18 @@ public class HeapSort {
         // 오른쪽 노드와 비교
         if(rightIndex < size && heap.get(rightIndex) > heap.get(largest))
             largest = rightIndex;
-        // 부모 노드보다 자식 노드가 큰 경우 교환
+        // 부모 노드보다 자식노드가 큰 경우 교환
         if(largest != idx){
-            tmp = heap.get(idx);
-            heap.set(idx,heap.get(largest));
-            heap.set(largest,tmp);
+            swap(heap, idx, largest);
             //재귀호출
-            MaxHeapify(heap,largest);
+            maxHeapify(heap,largest);
         }
+    }
+
+    private static void swap(Heap heap, int to, int from) {
+        int tmp = heap.get(to);
+        heap.set(to, heap.get(from));
+        heap.set(from, tmp);
     }
 
     private static int getLeftIndex(int idx){
@@ -222,10 +236,10 @@ public class HeapSort {
     private static int getRightIndex(int idx){
         return 2*idx+2;
     }
-    
+
     public static class Heap {
         int[] heap;
-        int size; // heapSize
+        int size;
 
         public Heap(int[] src){
             heap = src;
@@ -236,7 +250,6 @@ public class HeapSort {
             return size;
         }
 
-      	// 배열 사이즈
         public int length(){
             return heap.length;
         }
@@ -257,7 +270,9 @@ public class HeapSort {
             heap[idx] = value;
         }
     }
+
 }
+
 ```
 
 

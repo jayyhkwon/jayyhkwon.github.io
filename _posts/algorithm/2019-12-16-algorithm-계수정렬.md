@@ -89,7 +89,7 @@ CountingSort(A,B,k){
 
   
 
-- 계수정렬 코드
+- 알고리즘
 
 ```java
 import java.util.Arrays;
@@ -124,4 +124,29 @@ public class CountingSort {
 ```
 
 
+
+
+
+> 계수정렬 vs 퀵정렬
+
+- 퀵정렬의 경우 평균적으로 O(nlogn)의 시간복잡도를 가지나, 일반적인 정렬 상황에서 가장 선호되는 알고리즘이다.
+
+- 입력이 int인 배열이라면 최악의 시간복잡도 O(n+k)인 계수정렬을 우선 고려해볼 수 있겠다는 생각이 들었다. 하지만 스택오버플로우에서 특정조건이 아닌 이상 퀵 정렬이 선호되는 이유에 대해 찾을 수 있었다.
+
+- 1. 계수정렬은 countArray를 사용하므로 max값이 크다면 배열의 크기가 커져 배열 생성이  많은 비용이 발생한다.
+
+  2. 만약 largest, smallest 원소 차이가 크다면 countArray에 의미없는 작업을 수행 할 수있다.
+
+     ```java
+     // smallest = 1, largest = 99999이면 2~99998은 의미없는 루프를 돌게된다.
+     for(int i=1; i<=max; i++){
+       countArray[i] = countArray[i] + countArray[i-1];
+     }
+     ```
+
+  3. 계수정렬은 숫자가 아닌 경우 적용할 수 없다
+
+
+
+ref. <a href="https://stackoverflow.com/questions/47736838/why-is-quick-sort-better-than-counting-sort">계수정렬 vs 퀵정렬</a>
 

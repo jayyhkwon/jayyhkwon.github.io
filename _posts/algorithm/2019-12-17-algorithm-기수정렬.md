@@ -63,7 +63,7 @@ class RadixSortTest {
 
 ```
 
-- 기수정렬 코드
+- 알고리즘
 
 ```java
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  " 퀵 정렬(Quick Sort) "
+title:  " 퀵정렬 "
 category: Algorithm
 tags: [Algorithm]
 comments: true
@@ -12,7 +12,7 @@ comments: true
 
 
 
-> **퀵 정렬**
+> **퀵정렬**
 
 - 합병 정렬과 마찬가지로 퀵 정렬또한 분할 정복을 기반으로 정렬하지만 차이점이 있다.
 
@@ -118,7 +118,7 @@ QuickSort(A,p,r){
 
 
 
-> Java로 퀵 정렬 구현
+> Java로 퀵정렬 구현
 
 - 테스트 코드
 
@@ -149,7 +149,7 @@ class QuickSortTest {
 
 ```
 
-- 퀵 정렬 코드
+- 알고리즘
 
 ```java
 public class QuickSort {

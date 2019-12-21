@@ -41,7 +41,7 @@ BucketSort(A){
 
 
 
-> **Java로 알고리즘 구현**
+> **Java로 버킷정렬 구현**
 
 - 테스트 코드
 
@@ -72,7 +72,7 @@ class BucketSortTest {
 }
 ```
 
-- 버킷정렬
+- 알고리즘
 
 ```java
 
