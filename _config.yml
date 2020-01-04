@@ -50,6 +50,7 @@ nav:
     - { Java: '/blog/categories/#Java' }
     - { Spring: '/blog/categories/#Spring' }
     - { C: '/blog/categories/#C' }
+    - { DataStructure: '/blog/categories/#DataStructure'}
     - { Etc: '/blog/categories/#Etc' }
     # - { Tags: '/blog/tags/' }
   About:
