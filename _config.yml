@@ -1,7 +1,7 @@
 # Site Info
 title: 'jayyhkwon의 개발공부로그'
 tagline: 'jayyhkwon의 개발공부로그'
-description: '프로그래밍을 공부하며 배운점 느낀점을 기록하는 곳입니다.'
+description: '프로그래밍을 공부하며 배운점, 느낀점을 기록하는 곳입니다.'
 baseurl: ""
 url: https://jayyhkwon.github.io
 #logo: '/public/logo.png'
@@ -50,6 +50,7 @@ nav:
     - { Java: '/blog/categories/#Java' }
     - { Spring: '/blog/categories/#Spring' }
     - { C: '/blog/categories/#C' }
+    - { OS: '/blog/categories/#OS' }
     - { DataStructure: '/blog/categories/#DataStructure'}
     - { Etc: '/blog/categories/#Etc' }
     # - { Tags: '/blog/tags/' }
