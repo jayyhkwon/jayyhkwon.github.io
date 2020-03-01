@@ -52,6 +52,7 @@ nav:
     - { C: '/blog/categories/#C' }
     - { OS: '/blog/categories/#OS' }
     - { DataStructure: '/blog/categories/#DataStructure'}
+    - { Android: '/blog/categories/#Android'}
     - { Etc: '/blog/categories/#Etc' }
     # - { Tags: '/blog/tags/' }
   About:
